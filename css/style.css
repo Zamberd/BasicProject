@@ -1,75 +1,169 @@
-* {
-    font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+@font-face {
+	font-family: RobotoRegular; /* Гарнитура шрифта */
+	src: url(../fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: RobotoMedium; /* Гарнитура шрифта */
+	src: url(../fonts/Roboto-Medium.ttf); /* Путь к файлу со шрифтом */
 }
 
 body {
-    margin: 50px auto;
-    background-color: #ffffff;
+	font-family: RobotoRegular;
+	color: #000;
+	margin: 0;
 }
 
-header h1 {
-    font-size: 108px;
-    margin: 0px;
+#title {
+	font-family: RobotoMedium;
+	padding: 15px;
+	height: 103px;
+	width: 570px;
+	line-height: 100px;
+	font-size: 24pt;
+	color: #fff;
 }
 
-header h2 {
-    font-size: 54px;
-    margin: 0px;
-    color: #888;
-    font-style: italic;
+.content {
+	margin: 0;
+	padding-left: 31px;
+	height: 720px;
+	width: 1024px;
+	background: #000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 20px;
-    display: block;
-    clear: right;
-    background-color: #666;
-    padding-left: 4px;
-    height: 48px;
+.menuBlock, .categoryBlock, .itemBlock {
+	float: left;
+	margin-left: 1px;
+	padding-top: 8px;
+	overflow: hidden;
+	width: 320px;
+	height: 500px;
+	background: #eeeeee;
 }
 
-nav ul li {
-    display: inline;
-    padding: 0px 20px 5px 10px;
-    border-right: 1px solid #ccc;
+.menu_item, .category_item {
+	padding: 0 25px 0 25px;
+	line-height: 48px;
+	width: 270px;
+	height: 48px;
 }
 
-nav ul li a {
-    color: #EFD3D3;
-    text-decoration: none;
-    font-size: 39px;
-    font-weight: bold;
+.menu_item img, .category_item img {
+	float: right;
+	padding-top: 12px;
+	vertical-align: middle;
 }
 
-nav ul li a:hover {
-    color: #fff;
+.on {
+	background: #e2e2e2;
 }
 
-article > header h1 {
-    font-size: 60px;
-    margin-left: 14px;
+.activ {
+	background: #bee4e9;
 }
 
-article > header h1 a {
-    color: #993333;
+.categoryBlock {
+	display: none;
 }
 
-article > header h1 img {
-    vertical-align:middle;
+.category_item {
+	display: none;
 }
 
-article > section header h1 {
-    font-size: 48px;
+.itemBlock {
+	display: none;
 }
 
-article p {
-    clear: both;
+.item {
+	display: none;
+	padding: 0 25px 0 25px;
+	line-height: 48px;
+	width: 270px;
+	height: 48px;
 }
 
-footer p {
-    text-align: center;
-    font-size: 36px;
-    color: #888;
-    margin-top: 30px;
+.title {
+	display: block;
+	float: left;
+	width: 200px;
+}
+
+.number {
+	font-family: RobotoMedium;
+	float: left;
+	left: 0;
+	margin-left: -25px;
+	text-align: center;
+	width: 70px;
+	height: 48px;
+	line-height: 50px;
+}
+
+.title {
+	float: left;
+}
+
+.nav {
+	position: absolute;
+	margin-top: 337px;
+	margin-left: 774px;
+	width: 250px;
+	height: 250px;
+	border-radius: 250px 0 0 0;
+	background: #838ac4;
+
+	/*background: url('../nav.png');*/
+}
+
+#up, #left, #right, #ok, #down {
+	position: absolute;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+#up {
+	bottom: 145px;
+	right: 75px;
+	background: url('../img/up.png');
+}
+
+#down {
+	bottom: 10px;
+	right: 75px;
+	background: url('../img/down.png');
+}
+
+#left {
+	bottom: 80px;
+	right: 140px;
+	background: url('../img/left.png');
+}
+
+#right {
+	bottom: 80px;
+	right: 10px;
+	background: url('../img/right.png');
+}
+
+#ok {
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+	text-align: center;
+	line-height: 70px;
+	background: #000;
+	color: #fff;
+	font-size: 24pt;
+	bottom: 70px;
+	right: 65px;
+}
+
+#up:hover, #down:hover, #left:hover, #right:hover, #ok:hover {
+	opacity: 0.4;
+}
+
+#up:active, #down:active, #left:active, #right:active, #ok:active {
+	opacity: 0.8;
 }
